@@ -8,7 +8,7 @@ public class ejercicio2 {
 
 		Scanner entrada = new Scanner (System.in);	
 		
-		double random = Math.random() + 1;
+		double random = Math.random();
 
 				int numeroSecreto = (int) (random * 50);
 

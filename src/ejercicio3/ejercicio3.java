@@ -8,7 +8,7 @@ public class ejercicio3 {
 		Scanner entrada = new Scanner(System.in);
 
 		char decision = ' ' ;
-		
+		int puntajeMax = 0;
 		do {
 			System.out.println("1-Registrar puntaje 📥");
 			System.out.println("2-Mostrar mejor puntaje 👑");
@@ -16,14 +16,14 @@ public class ejercicio3 {
 
 			System.out.println("elija una de las opciones: ");
 			int opciones = entrada.nextInt();
-			int puntajeMax = 0;
+	
 			switch (opciones) {
 			case 1:
 				System.out.println("Ingrese su puntaje: ");
 				int puntaje = entrada.nextInt();
 				if (puntaje > puntajeMax) {
 					System.out.println("Usted tiene el puntaje Maximo");
-					puntaje = puntajeMax;
+					puntajeMax = puntaje;
 				} else if (puntaje < puntajeMax) {
 					System.out.println("usted tiene: " + puntaje + ".El puntaje maximo es " + puntajeMax);
 				} else {
@@ -43,7 +43,7 @@ public class ejercicio3 {
 				break;
 			}
 
-		} while (decision != 's' || decision != 'S');
+		} while (decision != 's' && decision != 'S');
 		System.out.println("PROGRAMA FINALIZADO");
 	}
 }
